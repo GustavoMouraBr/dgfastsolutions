@@ -1,0 +1,504 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>D&G Fast Solutions</title>
+
+  <!-- External stylesheet (gallery + modal) -->
+  <link rel="stylesheet" href="styles.css" />
+
+  <style>
+    body {
+      margin: 0;
+      font-family: system-ui, Segoe UI, Roboto, Arial, sans-serif;
+      background: #f1f7ff;
+      color: #1f2937;
+    }
+
+    .wrap {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 28px;
+    }
+
+    header {
+      display: flex;
+      gap: 16px;
+      align-items: center;
+      margin-bottom: 18px;
+    }
+
+    .logo {
+      width: 220px;
+      height: auto;
+      border-radius: 14px;
+      background: #ffffff;
+      border: 1px solid rgba(17, 24, 39, 0.12);
+      object-fit: contain;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 1.8rem;
+      color: #0f172a;
+    }
+
+    .card {
+      border: 1px solid rgba(17, 24, 39, 0.10);
+      background: #ffffff;
+      border-radius: 16px;
+      padding: 16px;
+      margin-top: 12px;
+      box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
+    }
+
+    .label {
+      color: rgba(31, 41, 55, 0.70);
+      font-size: 0.9rem;
+      margin-bottom: 6px;
+    }
+
+    a {
+      color: #0ea5a4;
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    @media (max-width: 700px) {
+      .row {
+        grid-template-columns: 1fr;
+      }
+
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .logo {
+        width: 260px;
+      }
+    }
+
+    button {
+      cursor: pointer;
+      border-radius: 12px;
+      border: 1px solid rgba(17, 24, 39, 0.14);
+      background: rgba(14, 165, 164, 0.10);
+      color: #0f172a;
+      padding: 10px 12px;
+      font-weight: 700;
+    }
+
+    button:hover {
+      background: rgba(14, 165, 164, 0.16);
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 10px 12px;
+      border-radius: 12px;
+      border: 1px solid rgba(17, 24, 39, 0.14);
+      background: #ffffff;
+      color: #0f172a;
+      outline: none;
+      box-sizing: border-box;
+    }
+
+    input:focus,
+    textarea:focus {
+      border-color: rgba(14, 165, 164, 0.6);
+      box-shadow: 0 0 0 4px rgba(14, 165, 164, 0.18);
+    }
+
+    textarea {
+      min-height: 90px;
+      resize: vertical;
+    }
+
+    .review {
+      padding: 12px;
+      border-radius: 12px;
+      border: 1px solid rgba(17, 24, 39, 0.10);
+      background: rgba(241, 247, 255, 0.60);
+      margin-top: 10px;
+    }
+
+    .muted {
+      color: rgba(31, 41, 55, 0.70);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <header>
+      <img class="logo" src="LOGO.png" alt="D&G Fast Solutions logo" />
+      <div>
+        <h1>D&amp;G Fast Solutions</h1>
+        <div class="muted">Fast cleaning. Solid results.</div>
+      </div>
+    </header>
+
+    <div class="row">
+      <div class="card">
+        <div class="label">Phone</div>
+        <div><a href="tel:+15618093404">(561) 809-3404</a></div>
+        <div><a href="tel:+14322149876">(432) 214-9876</a></div>
+      </div>
+
+      <div class="card">
+        <div class="label">Company Address</div>
+        <div>2234 North Federal Highway, Boca Raton, FL, 33431</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="label">Company Email</div>
+      <div>dgfastsolutions@gmail.com</div>
+    </div>
+
+    <div class="card">
+      <div class="label">Company Message</div>
+      <div>
+        We offer reliable residential and commercial cleaning. Contact us for a quick quote.
+        We do our best to make sure customers are always satisfied!
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="label">Types of Cleaning</div>
+
+      <div class="review">
+        <strong>Residential Cleaning</strong>
+        <div class="muted">Routine cleaning for houses, apartments, and condos.</div>
+      </div>
+
+      <div class="review">
+        <strong>Commercial Cleaning</strong>
+        <div class="muted">Cleaning services for offices, storefronts, and workspaces.</div>
+      </div>
+
+      <div class="review">
+        <strong>Deep Cleaning</strong>
+        <div class="muted">Detail-focused cleaning for buildup and hard-to-reach areas.</div>
+      </div>
+
+      <div class="review">
+        <strong>Move-In / Move-Out Cleaning</strong>
+        <div class="muted">Thorough cleaning for empty properties before/after moving.</div>
+      </div>
+
+      <div class="review">
+        <strong>Post-Construction Cleaning</strong>
+        <div class="muted">Cleanup after renovations/construction to make everything shine.</div>
+      </div>
+    </div>
+
+    <!-- RESULTS GALLERY -->
+    <div class="card">
+      <h2 style="margin: 0;">Check out our great results!</h2>
+      <div class="muted" style="margin-top: 6px;">Swipe → (click a photo to view)</div>
+
+      <div class="gallery-strip" id="resultsGallery">
+        <button class="gallery-arrow left" type="button" aria-label="Scroll left">‹</button>
+
+        <div class="gallery-item">
+          <img src="results1.jpg" alt="Cleaning result 1" class="gallery-img" />
+        </div>
+        <div class="gallery-item">
+          <img src="results2.jpg" alt="Cleaning result 2" class="gallery-img" />
+        </div>
+        <div class="gallery-item">
+          <img src="results3.jpg" alt="Cleaning result 3" class="gallery-img" />
+        </div>
+        <div class="gallery-item">
+          <img src="results4.jpg" alt="Cleaning result 4" class="gallery-img" />
+        </div>
+        <div class="gallery-item">
+          <img src="results5.jpg" alt="Cleaning result 5" class="gallery-img" />
+        </div>
+        <div class="gallery-item">
+          <img src="results6.jpg" alt="Cleaning result 6" class="gallery-img" />
+        </div>
+        <div class="gallery-item">
+          <img src="results7.jpg" alt="Cleaning result 7" class="gallery-img" />
+        </div>
+        <div class="gallery-item">
+          <img src="results8.jpg" alt="Cleaning result 8" class="gallery-img" />
+        </div>
+
+        <button class="gallery-arrow right" type="button" aria-label="Scroll right">›</button>
+      </div>
+    </div>
+
+    <!-- BACK4APP REVIEWS -->
+    <div class="card">
+      <div class="label">Customer Reviews</div>
+      <div id="reviews" class="muted">Loading reviews…</div>
+
+      <hr
+        style="
+          border: none;
+          border-top: 1px solid rgba(17, 24, 39, 0.12);
+          margin: 14px 0;
+        "
+      />
+
+      <div class="label">Leave a Review</div>
+
+      <input id="name" placeholder="Name (optional)" />
+
+      <input
+        id="emailInput"
+        type="email"
+        placeholder="Email (required)"
+        required
+        autocomplete="email"
+        style="margin-top: 10px"
+      />
+
+      <input
+        id="rating"
+        type="number"
+        min="1"
+        max="5"
+        placeholder="Rating (1-5)"
+        style="margin-top: 10px"
+      />
+
+      <textarea
+        id="text"
+        placeholder="Write your review..."
+        style="margin-top: 10px"
+      ></textarea>
+
+      <button id="submitBtn" style="margin-top: 10px;">Submit Review</button>
+
+      <div id="status" class="muted" style="margin-top: 10px;"></div>
+    </div>
+  </div>
+
+  <!-- FULLSCREEN IMAGE MODAL -->
+  <div class="modal" id="imgModal" aria-hidden="true">
+    <div class="modal-backdrop" id="modalBackdrop"></div>
+
+    <div class="modal-content" role="dialog" aria-modal="true" aria-label="Image viewer">
+      <button class="modal-close" id="modalCloseBtn" type="button" aria-label="Close">✕</button>
+      <img id="modalImg" alt="" />
+      <div class="modal-caption" id="modalCaption"></div>
+    </div>
+  </div>
+
+  <script>
+    // Back4App / Parse config
+    const PARSE_APP_ID = "dkTehprJdrQYKjnkVSIFeRGvkQkRIPKeasFdRcNy";
+    const PARSE_JS_KEY = "4bjpKZi9SGJDdQXeCkpwDfXKCgHWgCogjyxnvWa2";
+    const PARSE_SERVER_URL = "https://parseapi.back4app.com/";
+    const CLASS_NAME = "Review";
+
+    async function parseRequest(path, method = "GET", bodyObj) {
+      const res = await fetch(PARSE_SERVER_URL + path, {
+        method,
+        headers: {
+          "X-Parse-Application-Id": PARSE_APP_ID,
+          "X-Parse-Javascript-Key": PARSE_JS_KEY,
+          "Content-Type": "application/json",
+        },
+        body: bodyObj ? JSON.stringify(bodyObj) : undefined,
+      });
+
+      const data = await res.json();
+      if (!res.ok) throw new Error(data.error || "Request failed");
+      return data;
+    }
+
+    function escapeHtml(str) {
+      return String(str)
+        .replaceAll("&", "&amp;")
+        .replaceAll("<", "&lt;")
+        .replaceAll(">", "&gt;")
+        .replaceAll('"', "&quot;")
+        .replaceAll("'", "&#039;");
+    }
+
+    function renderReviews(items) {
+      const root = document.getElementById("reviews");
+
+      if (!items.length) {
+        root.textContent = "No reviews yet.";
+        return;
+      }
+
+      root.innerHTML = "";
+      items.forEach((r) => {
+        const div = document.createElement("div");
+        div.className = "review";
+
+        const stars =
+          "★★★★★".slice(0, r.rating || 0) +
+          "☆☆☆☆☆".slice(0, 5 - (r.rating || 0));
+
+        div.innerHTML = `
+          <div style="font-weight:800">
+            ${escapeHtml(r.name || "Anonymous")}
+            <span class="muted">• ${stars}</span>
+          </div>
+          <div style="margin-top:6px">${escapeHtml(r.text || "")}</div>
+          <div class="muted" style="margin-top:8px;font-size:.85rem">
+            ${new Date(r.createdAt).toLocaleString()}
+          </div>
+        `;
+
+        root.appendChild(div);
+      });
+    }
+
+    async function loadReviews() {
+      try {
+        const data = await parseRequest(
+          `classes/${CLASS_NAME}?order=-createdAt&limit=20`
+        );
+        renderReviews(data.results || []);
+      } catch (e) {
+        document.getElementById("reviews").textContent =
+          "Could not load reviews (check keys / permissions).";
+        console.error(e);
+      }
+    }
+
+    // Slightly stricter email check than the basic one:
+    // - requires a dot in the domain
+    // - 2+ char TLD
+    function isValidEmail(email) {
+      const re = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
+      return re.test(email);
+    }
+
+    async function submitReview() {
+      const status = document.getElementById("status");
+      status.textContent = "";
+
+      const name = document.getElementById("name").value.trim();
+      const email = document.getElementById("emailInput").value.trim();
+      const rating = Number(document.getElementById("rating").value);
+      const text = document.getElementById("text").value.trim();
+
+      if (!email) {
+        status.textContent = "Email is required.";
+        return;
+      }
+
+      if (!isValidEmail(email)) {
+        status.textContent = "Please enter a valid email address.";
+        return;
+      }
+
+      if (!text) {
+        status.textContent = "Please write a review.";
+        return;
+      }
+
+      if (!Number.isFinite(rating) || rating < 1 || rating > 5) {
+        status.textContent = "Rating must be 1–5.";
+        return;
+      }
+
+      try {
+        document.getElementById("submitBtn").disabled = true;
+        status.textContent = "Submitting…";
+
+        await parseRequest(`classes/${CLASS_NAME}`, "POST", {
+          name: name || "Anonymous",
+          email, // stored in Back4App (not displayed)
+          rating,
+          text,
+        });
+
+        status.textContent = "Thanks! Your review was submitted.";
+        document.getElementById("name").value = "";
+        document.getElementById("emailInput").value = "";
+        document.getElementById("rating").value = "";
+        document.getElementById("text").value = "";
+
+        await loadReviews();
+      } catch (e) {
+        status.textContent = "Submit failed (check Back4App permissions).";
+        console.error(e);
+      } finally {
+        document.getElementById("submitBtn").disabled = false;
+      }
+    }
+
+    document.getElementById("submitBtn").addEventListener("click", submitReview);
+    loadReviews();
+
+    // ----------------------------
+    // Fullscreen image modal logic
+    // ----------------------------
+    const modal = document.getElementById("imgModal");
+    const modalImg = document.getElementById("modalImg");
+    const modalCaption = document.getElementById("modalCaption");
+    const closeBtn = document.getElementById("modalCloseBtn");
+    const backdrop = document.getElementById("modalBackdrop");
+
+    function openModal(src, alt) {
+      modalImg.src = src;
+      modalImg.alt = alt || "Result photo";
+      modalCaption.textContent = alt || "";
+      modal.classList.add("open");
+      modal.setAttribute("aria-hidden", "false");
+      document.body.classList.add("modal-open");
+    }
+
+    function closeModal() {
+      modal.classList.remove("open");
+      modal.setAttribute("aria-hidden", "true");
+      document.body.classList.remove("modal-open");
+      modalImg.src = "";
+      modalImg.alt = "";
+      modalCaption.textContent = "";
+    }
+
+    document.querySelectorAll(".gallery-img").forEach((img) => {
+      img.addEventListener("click", () => {
+        openModal(img.src, img.alt);
+      });
+    });
+
+    closeBtn.addEventListener("click", closeModal);
+    backdrop.addEventListener("click", closeModal);
+
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && modal.classList.contains("open")) {
+        closeModal();
+      }
+    });
+
+    // Optional: arrow buttons to scroll the gallery
+    const gallery = document.getElementById("resultsGallery");
+    const leftArrow = document.querySelector(".gallery-arrow.left");
+    const rightArrow = document.querySelector(".gallery-arrow.right");
+
+    function scrollGalleryBy(px) {
+      gallery.scrollBy({ left: px, behavior: "smooth" });
+    }
+
+    if (leftArrow && rightArrow) {
+      leftArrow.addEventListener("click", () => scrollGalleryBy(-320));
+      rightArrow.addEventListener("click", () => scrollGalleryBy(320));
+    }
+  </script>
+</body>
+</html>
